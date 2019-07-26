@@ -1,0 +1,12 @@
+Django
+django-bootstrap3
+django-bootstrap-datepicker-plus
+Pillow
+pip
+pytz
+setuptools
+sqlparse
+gunicorn
+django-heroku
+requests
+whitenoise

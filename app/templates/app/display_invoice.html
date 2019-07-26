@@ -1,0 +1,18 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<br />
+
+{% if error_message %}
+<p class="text-danger">{{error_message}}</p>
+{% endif %}
+  
+{% for invoice in invoice_images %} 
+<div class="col-md-4"> 
+    {{ invoice.text }} 
+    <img src="{{ invoice.invoice_capture.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
+</div>
+{% endfor %} 
+  
+{% endblock %}

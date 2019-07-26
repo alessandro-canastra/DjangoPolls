@@ -1,0 +1,29 @@
+﻿{% extends 'app/bootstrap4layout.html' %}
+
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block content %}
+
+<br />
+
+{% if error_message %}
+<p class="text-danger">{{error_message}}</p>
+{% endif %}
+	
+{{ form.media }}
+
+<form method = "post" enctype="multipart/form-data"> 
+	{% csrf_token %} 
+    {#% if perms.app.add_Invoice %#}
+	{{ form.as_p }} 
+    <button type="submit">Upload</button> 
+    {#% endif %#}
+</form> 
+
+{% endblock %}
